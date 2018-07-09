@@ -1,0 +1,4 @@
+개발자에게 CORS는 너무나도 중요합니다.
+https://developer.mozilla.org/ko/docs/Web/HTTP/Access_control_CORS
+
+

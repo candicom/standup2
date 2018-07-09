@@ -1,5 +1,5 @@
 // Initialize Firebase
-const config = {
+const firebase_config = {
     apiKey: "AIzaSyCEEWv1YeDkPWmmC1gSUI4YEBqKpqIc8t0",
     authDomain: "standup-ef4c7.firebaseapp.com",
     databaseURL: "https://standup-ef4c7.firebaseio.com",
@@ -8,4 +8,4 @@ const config = {
     messagingSenderId: "986330039326"
 };
 
-export default config;
+export default firebase_config;

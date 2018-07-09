@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import './Editor.css';
 import Profile from './Profile';
+import Article from './Article';
 
 class Editor extends Component {
 
@@ -41,6 +42,14 @@ class Editor extends Component {
         else return false;
     };
 
+    handleSubmit = (e) => {
+        let article = Object.assign({}, Article());
+        article.user = 'Genji';
+        article.content = this.state.content;
+        article.urls[0].url = this.state.embedlyUrl;
+        this.props.submit(article);
+    };
+
     render() {
         return (
             <div className="wrapEditor">
@@ -54,7 +63,9 @@ class Editor extends Component {
                     ></div>
                 </div>
                 <div className="actionBar">
-                    <button className="upload" onClick={this.props.handleSubmit}>
+                    <button className="upload"
+                            disabled={!this.hasValue(this.state.content)}
+                            onClick={this.handleSubmit}>
                         <span>스탠드업!</span>
                     </button>
                 </div>
