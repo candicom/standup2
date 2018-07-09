@@ -1,10 +1,12 @@
-import { USER, GROUP,ALL } from '../constants'
+import { ARTICLE,ALL } from '../constants'
 import FirebaseDao from '../FirebaseDao'
 import config from '../config'
+import {groupSelect} from './Group'
 const dao = new FirebaseDao(config);
+
 export function userArticles() {
     return {
-        type: USER
+        type: ARTICLE
     }
 }
 /*
@@ -29,14 +31,12 @@ export function loadArticles() {
         dao.list(25,(articles)=>dispatch(getArticles(articles)));
     };
 }
+
 export function updateArticle(postData){
     return (dispatch) => {
-        dao.update(dao.newKey(),postData);
+        dao.update(dao.newKey(),postData).then(()=>{
+            dispatch(groupSelect(postData.groupName));
+        });
+
     };
-}
-export function groupArticles(articles) {
-    return {
-        type: GROUP,
-        articles: articles
-    }
 }

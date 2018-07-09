@@ -1,91 +1,29 @@
-import React, {Component} from 'react';
-// import logo from './logo.svg';
-import logo from './img/stand_up_logo.png';
+import React, { Component } from 'react';
+import standardLogo from './img/stand_up_logo.png';
 import './App.css';
-import Editor from './Editor';
-import { connect } from 'react-redux';
-import { Link } from 'react-router';
-import {updateArticle} from './actions/Article';
+import Buttons from './Buttons'
+import CardList from './CardList'
 
+/*
+* App Component
+*/
 class App extends Component {
-    constructor() {
-        super();
-        this.state = {
-            articles: []
-        }
-    }
-
-    // componentWillMount() {
-    //     this.dao.list(25).on('value', (dataSnapshots) => {
-    //         var items = [];
-    //         dataSnapshots.forEach(function(dataSnapshot) {
-    //             var item = dataSnapshot.val();
-    //             item['key'] = dataSnapshot.key;
-    //             console.log(dataSnapshot.val());
-    //             items.push(item);
-    //         });
-    //         if (items && items.length>0) {
-    //             this.setState({
-    //                 articles: items.reverse()
-    //             });
-    //         }
-    //     });
-    // }
-
-    // componentWillUnmount() {
-    //     this.dao.off();
-    // }
-
-    submit = (article) => {
-        if (article) {
-            // let key = this.dao.newKey();
-            // let updated = this.dao.update(key, article);
-            // return updated;
-            const {dispatch} = this.props;
-            dispatch(updateArticle(article));
-            this.forceUpdate();
-        }
-    };
-
-    // isAnonymous = () => {
-    //     return true;
-    // };
-    //
-    // getArticles = () => {
-    //     let lis = [];
-    //     for(let i=0; i<this.state.articles.length; i++) {
-    //         lis.push(<li key={this.state.articles[i].key}>{this.state.articles[i].content}</li>);
-    //     }
-    //     return lis;
-    // };
-
     render() {
+        let groupName = this.props.params.groupName;
+        let logo = standardLogo;
+        let headerClass = "app-header";
+        let headerStyle ={
+            backgroundImage : 'url(' +logo+ ')'
+        }
         return (
-            <div className="App">
-                <header className="App-header">
-                    <Link to="/">
-                        <img src={logo} className="App-logo" alt="logo"/>
-                    </Link>
-                    {/*<h1 className="App-title">Welcome to React</h1>*/}
-                    {/*<h2>Stand Up 2 앱을 만들어 봅시다</h2>*/}
-                </header>
-                {/*<p className="App-intro">*/}
-                    {/*To get started, edit <code>src/App.js</code> and save to reload.*/}
-                {/*</p>*/}
-                {/*<p>*/}
-                    {/*이제 여기서 부터 프로젝트는 시작입니다. 로고는 일단은 그냥 둡시다.*/}
-                {/*</p>*/}
-                {/*<Editor {...this} />*/}
-                <Editor submit={this.submit} />
+            <div className="app">
+                <div className={headerClass} style={headerStyle}>
+                </div>
+                <Buttons groupName={groupName}/>
                 {this.props.children}
-                {/*<ul>*/}
-                    {/*{this.getArticles()}*/}
-                {/*</ul>*/}
-                {/*<Card cardInfo={this.cardInfo} />*/}
-                {/*<CardList articles={this.state.articles}/>*/}
+                <CardList groupName={groupName}/>
             </div>
         );
     }
 }
-
-export default connect()(App);
+export default App;

@@ -1,8 +1,8 @@
-/*global firebase*/
 import React ,{Component} from 'react';
+import firebase from 'firebase';
 import './Profile.css';
-import { Link } from 'react-router';
-import PopCard from './PopCard';
+import { Link } from 'react-router'
+import PopCard from './PopCard'
 
 class Profile extends Component{
     constructor(props){
@@ -21,7 +21,7 @@ class Profile extends Component{
             }
         });
     }
-    popProfile(){
+    popProfile(e){
         this.setState({isPop:!this.state.isPop})
     }
     render(){
@@ -29,17 +29,15 @@ class Profile extends Component{
         if(user){
             return(
                 <span>
-            <div className="profile_name">
-              <a href="#" onClick={()=>this.popProfile()}>{user.displayName}</a>
-            </div>
-            <div className="profile_img_wrap">
-              <img src={user.photoURL} alt="profiles" className="profile_img"/>
+
+            <div className="profile-img-wrap">
+              <a href="#" onClick={(e)=>this.popProfile(e)}><img src={user.photoURL} alt="profiles" className="profile-img"/></a>
             </div>
             <PopCard isPop={this.state.isPop}/>
           </span>
             )
         }else{
-            return (<div className="profile_name"><Link to="/login">로그인</Link></div>)
+            return (<div className="profile-name"><Link to="/login">로그인</Link></div>)
         }
     }
 }
