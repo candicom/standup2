@@ -19,13 +19,13 @@ var article = {
     }]
 };
 
-it('upload article', function() {
-    let inserted = dao.insert(article);
-    dao.getArticle(inserted.key).on('value', (snapshot) => {
-        expect(snapshot.key).toEqual(inserted.key);
-    });
-    return inserted;
-});
+// it('upload article', function() {
+//     let inserted = dao.insert(article);
+//     dao.getArticle(inserted.key).on('value', (snapshot) => {
+//         expect(snapshot.key).toEqual(inserted.key);
+//     });
+//     return inserted;
+// });
 
 it('list article', function() {
    dao.list(25).once('value', (dataSnapshots)=> {

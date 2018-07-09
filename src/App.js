@@ -5,6 +5,7 @@ import './App.css';
 import Editor from './Editor';
 import FirebaseDao from './FirebaseDao';
 import config from './config';
+import CardList from './CardList'
 
 class App extends Component {
     constructor() {
@@ -71,9 +72,11 @@ class App extends Component {
                     이제 여기서 부터 프로젝트는 시작입니다. 로고는 일단은 그냥 둡시다.
                 </p>
                 <Editor {...this} />
-                <ul>
-                    {this.getArticles()}
-                </ul>
+                {/*<ul>*/}
+                    {/*{this.getArticles()}*/}
+                {/*</ul>*/}
+                {/*<Card cardInfo={this.cardInfo} />*/}
+                <CardList articles={this.state.articles}/>
             </div>
         );
     }

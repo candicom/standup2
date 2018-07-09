@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "https://candicom.github.io/standup2",
   "dependencies": {
+    "axios": "^0.18.0",
     "firebase": "^5.2.0",
     "gh-pages": "^1.2.0",
     "react": "^16.4.1",

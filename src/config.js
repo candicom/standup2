@@ -8,4 +8,5 @@ const firebase_config = {
     messagingSenderId: "986330039326"
 };
 
+export var embedlyKey = "1dbec65d188b40deab8990ec676adf3b";
 export default firebase_config;

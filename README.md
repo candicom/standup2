@@ -30,31 +30,31 @@ Embedly, Firebase, Github 페이지를 가지고 꽤나 당분가 무료로 운�
 Day 0 이외에는 각 브랜치에 진행사항에 대한 설명이 있습니다.
 
 * [Day 0. Git 설정 & README 작성](https://techstory.shma.so/%EC%84%9C%EB%B2%84%EB%A6%AC%EC%8A%A4-%EC%95%84%ED%82%A4%ED%85%8D%EC%B2%98-%EC%86%8C%EC%85%9C%EB%AF%B8%EB%94%94%EC%96%B4-%EA%B0%9C%EB%B0%9C%EA%B8%B0-0%ED%8E%B8-63084e103f77#.h1ogt1t7c)
-* Day 1. user story 1 - create-react-app
+* Day 1 (day1). user story 1 - create-react-app
 
   https://github.com/ehrudxo/standup/tree/day1
 
-* Day 2. user story 2 - logo, favicon, editor
+* Day 2 (day1). user story 2 - logo, favicon, editor
 
   https://github.com/ehrudxo/standup/tree/day2
 
-* Day 3. user story 2 - firebase, jest setting
+* Day 3 (day1). user story 2 - firebase, jest setting
 
   https://github.com/ehrudxo/standup/tree/day3
 
-* Day 4. user story 2 - firebase dao
+* Day 4 (day2). user story 2 - firebase dao
 
   https://github.com/ehrudxo/standup/tree/day4
 
-* Day 5. user story 3 - card, list, embed.ly, axios
+* Day 5 (day3). user story 3 - card, list, embed.ly, axios
 
   https://github.com/ehrudxo/standup/tree/day5
 
-* Day 6. user story 4 - authentication, redux & router
+* Day 6 (day4). user story 4 - authentication, redux & router
 
   https://github.com/ehrudxo/standup/tree/day6
 
-* Day 7. user story 4 - Group
+* Day 7 (day5). user story 4 - Group
   
   https://github.com/ehrudxo/standup/tree/day7
 
@@ -94,7 +94,7 @@ MIT
 
 
 
-# Day2
+# Day2 (day1)
 
 Day1에서 Hello World 와도 같은 프로그램을 빌드까지 했다고 하면 Day2에서는 실제 페이지를 만들기 위한 기본 작업들로 시작해서 User Story2번의 기초 작업을 해 보도록 하겠습니다.
 
@@ -440,7 +440,7 @@ export default App;
 
 
 
-# Day3
+# Day3 (day1)
 
 ## User Story 2
 
@@ -1037,7 +1037,7 @@ export default Editor;
 
 
 
-# Day4
+# Day4 (day2)
 
 ## User Story 2
 
@@ -1458,7 +1458,7 @@ getArticles(){
 
 
 
-# Day5
+# Day5 (day3)
 
 ## 사용자 스토리3
 
@@ -2131,7 +2131,7 @@ redux를 적용하는 작업을 해 보도록 하겠습니다.
 
 
 
-# Day6
+# Day6 (day4)
 
 ## 사용자 스토리4
 
@@ -2739,7 +2739,7 @@ export function updateArticle(postData){
 
 
 
-# Day7
+# Day7 (day5)
 
 ## 사용자 스토리5
 
