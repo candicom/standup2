@@ -1,3 +1,4 @@
+
 // Initialize Firebase
 const firebase_config = {
     apiKey: "AIzaSyCEEWv1YeDkPWmmC1gSUI4YEBqKpqIc8t0",
@@ -10,3 +11,4 @@ const firebase_config = {
 
 export var embedlyKey = "1dbec65d188b40deab8990ec676adf3b";
 export default firebase_config;
+
